@@ -2,6 +2,7 @@ NOTE
 * GIT 进行版本控制记录的是变化而不是文件
 * 全称参数用 '--<param>'
 * 命令末尾带 ' -- <file>' 指明操作的文件 
+* HEAD指向当前分支(branch)
 
 SET UP
 git config --global user.name "Your Name"
