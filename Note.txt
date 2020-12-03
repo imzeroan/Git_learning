@@ -1,11 +1,12 @@
 NOTE
 * GIT 进行版本控制记录的是变化而不是文件
-* 全称参数用 '--'
-* 命令末尾带 ' -- filename' 指明操作的文件 
+* 全称参数用 '--<param>'
+* 命令末尾带 ' -- <file>' 指明操作的文件 
+
 SET UP
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
-git init  # initial current dir to a local repository, stage/repository in the .git file, others is worktree.
+git init  # initial current dir to a local repository, stage/repository in the .git file, others is worktree
 
 GRAPH
 Worktree---Stage/Index---Repository
@@ -20,7 +21,13 @@ git diff  # difference between worktree & stage/index
 git diff --cached  # difference between stage/index & Repository(HEAD)
 git diff HEAD  # difference between worktree & Repository(HEAD)
 
-VERSION CONTROL
+COMMIT CONTROL
 git log  # look the commit log
 git reflog  # look the changes of commit(more detailed than git log)
-git reset --hard HEAD^  # reset repository's HEAD commit version to the former one(HEAD^^ former two, HEAD~100 former 100)
+git reset HEAD^  # reset repository's HEAD commit version to the former one(HEAD^^ former two, HEAD~100 former 100)
+git reset <commit id>  # reset commit according to commit id(get by 'git log' or 'git reflog')
+
+CHANGE WITHDRAW
+git restore <file>  # discard changes in worktree
+git restore --staged <file>  # discard changes in stage but the worktree keeps the changes
+git reset <param>  # discard changes in repository
