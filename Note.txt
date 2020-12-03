@@ -1,0 +1,25 @@
+NOTE
+The git control the CHANGE not the FILE!
+
+SET UP
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+git init  # initial current dir to a local repository, stage/repository in the .git file, others is worktree.
+
+GRAPH
+Worktree---Stage/Index---Repository
+
+ADD CHANGE
+git add  # worktree->stage/index(cache)
+git commit -m "message"  # stage/index->local repository
+git status  # status of the worktree
+
+LOOK DIFF
+git diff  # difference between worktree & stage/index
+git diff -cached  # difference between stage/index & Repository(HEAD)
+git diff HEAD  # difference between worktree & Repository(HEAD)
+
+VERSION CONTROL
+git log  # look the commit log
+git reflog  # look the changes of commit(more detailed than git log)
+git reset --hard HEAD^  # reset repository's HEAD commit version to the former one(HEAD^^ former two, HEAD~100 former 100)
