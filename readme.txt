@@ -1,5 +1,5 @@
 This is another repo for git learning.
-AMD yes!
+MS yes!
 hello
 nihao
 sala
