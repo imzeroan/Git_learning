@@ -1,3 +1,3 @@
 This is another repo for git learning.
-yes!
+AMD yes!
 Creating a new branch is quick and simple.
