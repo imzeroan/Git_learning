@@ -1,7 +1,8 @@
 NOTE
 * GIT 进行版本控制记录的是变化而不是文件
-* 全称参数用 '--<param>'
-* 命令末尾带 ' -- <file>' 指明操作的文件 
+* 全称参数用 `--<param>`
+* 命令末尾带 ` -- <file>` 指明操作的文件 
+* HEAD指向当前分支(branch)
 
 SET UP
 git config --global user.name "Your Name"
@@ -31,3 +32,15 @@ CHANGE WITHDRAW
 git restore <file>  # discard changes in worktree
 git restore --staged <file>  # discard changes in stage but the worktree keeps the changes
 git reset <param>  # discard changes in repository
+
+REMOTE 
+git remote  # look the remote repository name list
+git clone <remote repository (https/ssh)>
+git fetch
+git pull
+git push <remote repo name> <remote repo branch>  # push local repo of current branch to remote
+
+BRANCH
+git branch  # look branches
+git branch <new branch name>  # add new branch
+git checkout <branch name>	# switch branch; `git checkout -b <new branch name>` equal `git branch + git checkout`
