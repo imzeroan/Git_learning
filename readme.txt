@@ -5,3 +5,4 @@ hello bro
 hello sis
 hello man
 Git is funny
+Git is bad
